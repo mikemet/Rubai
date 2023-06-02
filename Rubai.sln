@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rubai", "Rubai.csproj", "{D1C57083-CF68-46A8-835A-31D8AD2B95DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1C57083-CF68-46A8-835A-31D8AD2B95DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1C57083-CF68-46A8-835A-31D8AD2B95DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1C57083-CF68-46A8-835A-31D8AD2B95DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1C57083-CF68-46A8-835A-31D8AD2B95DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2C06330-E736-482F-B6DD-7CFEC24EDC48}
+	EndGlobalSection
+EndGlobal
