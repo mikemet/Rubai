@@ -1,0 +1,49 @@
+﻿@page "/"
+
+<h1>Select your random Rubai:</h1>
+
+<button class="btn btn-primary" @onclick="GetRubai">Select random Rubai</button>
+
+@foreach (var item in rubai)
+{
+    <p>@item.ToString()</p>
+}
+
+@code {
+    string[] arr = File.ReadAllLines("Data/rubai.csv");
+    List<string> lst = new List<string>();
+    List<string> rubai = new List<string>(4)
+    {
+        "Мы цель созданья, смысл его отменный,",
+        "Взор Божества и сущность зрящих глаз.",
+        "Окружность мира - перстень драгоценный,",
+        "А мы в том перстне - вправленный алмаз."
+    };
+
+    Random rnd = new Random();
+    int mIndex;
+
+    private void GetRubai()
+    {
+        lst = arr.ToList();
+        mIndex = rnd.Next(lst.Count);
+
+        if (mIndex >= mIndex - 3)
+        {
+            mIndex = mIndex - 4;
+        }
+
+        while (mIndex % 4 != 0)
+        {
+            mIndex++;
+        }
+
+        rubai.Clear();
+
+        for (int i = 0; i < 4; i++)
+        {
+            rubai.Add(lst[mIndex]);
+            mIndex++;
+        }
+    }
+}
