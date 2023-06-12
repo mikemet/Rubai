@@ -1,8 +1,10 @@
 ﻿@page "/"
 
-<h1>Select your random Rubai:</h1>
+<PageTitle>Главная</PageTitle>
 
-<button class="btn btn-primary" @onclick="GetRubai">Select random Rubai</button>
+<h1>Выбери случайное рубаи:</h1>
+
+<button class="btn btn-primary" @onclick="GetRubai">Выбор</button>
 
 @foreach (var item in rubai)
 {
@@ -12,7 +14,8 @@
 @code {
     string[] arr = File.ReadAllLines("Data/rubai.csv");
     List<string> lst = new List<string>();
-    List<string> rubai = new List<string>(4)
+    //List<string> lst = arr.ToList();
+    List<string> rubai = new List<string>()
     {
         "Мы цель созданья, смысл его отменный,",
         "Взор Божества и сущность зрящих глаз.",
@@ -39,8 +42,9 @@
         }
 
         rubai.Clear();
-
-        for (int i = 0; i < 4; i++)
+        rubai.Add(lst[mIndex]);
+        mIndex++;
+        for (int i = 0; i < 3; i++)
         {
             rubai.Add(lst[mIndex]);
             mIndex++;
