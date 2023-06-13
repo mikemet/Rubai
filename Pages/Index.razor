@@ -1,26 +1,34 @@
 ﻿@page "/"
 
 <PageTitle>Главная</PageTitle>
+<div class="container text-center">
 
-<h1>Выбери случайное рубаи:</h1>
+    <img src="/images/khayyam.png" />
 
-<button class="btn btn-primary" @onclick="GetRubai">Выбор</button>
+    <div>
+        <span><i>Ома́р Хайя́м Нишапури́</i></span>
+        <strong><i>(перс. عُمَر خَیّام نیشابوری‎; 18 мая 1048, Нишапур — 4 декабря 1131, там же) персидский философ, математик, астроном и поэт.</i></strong>
+    </div>
 
-@foreach (var item in rubai)
-{
-    <p>@item.ToString()</p>
-}
+    <div class="rubai">
+        @foreach (var item in rubai)
+        {
+            <p>@item.ToString()<br /></p>
+        }
+    </div>
+
+    <button class="btn btn-primary" @onclick="GetRubai">Выбор</button>
+</div>
 
 @code {
     string[] arr = File.ReadAllLines("Data/rubai.csv");
     List<string> lst = new List<string>();
-    //List<string> lst = arr.ToList();
     List<string> rubai = new List<string>()
     {
-        "Мы цель созданья, смысл его отменный,",
-        "Взор Божества и сущность зрящих глаз.",
-        "Окружность мира - перстень драгоценный,",
-        "А мы в том перстне - вправленный алмаз."
+        "Если я согрешил - то не сам по себе,",
+        "Путь земной совершил я не сам по себе,",
+        "Где я был? Кто я был? Жил впотьмах, исполняя",
+        "Все, что Он предрешил, а не сам по себе.",
     };
 
     Random rnd = new Random();
