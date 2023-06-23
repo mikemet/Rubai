@@ -1,3 +1,18 @@
+@font-face{
+    font-family: 'XO_Caliburn_Nu';
+    src:url('../fonts/XO_Caliburn_Nu.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'monotypecorsiva';
+    src: url('../fonts/monotypecorsiva-webfont.woff'),
+        url('../fonts/monotypecorsiva-webfont.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/*==================================================== for errors ============*/
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
@@ -26,11 +41,31 @@
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
-
-main {
-    min-width: 320px;
+/*======================================================== Global ==============*/
+* {
+    padding: 0;
+    margin: 0;
 }
 
+html {
+    /* для плавности анимации перехода (стрелка в блоке header) */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'XO_Caliburn_Nu', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    overflow-wrap: break-word;
+    /* перенос слов на другую строку */
+}
+
+.container {
+    min-width: 320px;
+    max-width: 100%;
+}
+/*================================================================================*/
 .rubai {
-    text-align: left;
-    }
+    font-family: monotypecorsiva, Arial, Helvetica, sans-serif;
+}
+
