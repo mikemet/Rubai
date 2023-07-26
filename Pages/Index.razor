@@ -3,22 +3,29 @@
 <PageTitle>Главная</PageTitle>
 
 <div class="container">
+    <div class="row">
+        <div class="box imagebox col-sm-12 col-md-4 col-xl-4">
+            <img class="image-responsive" src="/images/khayyam.png" alt="Omar_Khayyam" />
+        </div>
 
-    <img src="/images/khayyam.png" alt=""/>
-
-    <div>
-        <span><i>Ома́р Хайя́м Нишапури́</i></span>
-        <strong><i>(перс. عُمَر خَیّام نیشابوری‎; 18 мая 1048, Нишапур — 4 декабря 1131, там же) персидский философ, математик, астроном и поэт.</i></strong>
+        <div class="box annotation col-sm-12 col-md-8 col-xl-8">
+            <span><i>Ома́р Хайя́м Нишапури́</i></span>
+            <strong><i>(перс. عُمَر خَیّام نیشابوری‎; 18 мая 1048, Нишапур — 4 декабря 1131, там же) персидский философ, математик, астроном и поэт.</i></strong>
+        </div>
     </div>
 
-    <div class="rubai">
-        @foreach (var item in rubai)
-        {
-            <p>@item.ToString()<br /></p>
-        }
-    </div>
+    <div class="container">
+        <div class="row box">
+            <button class="btn btn-primary" @onclick="GetRubai">Выбор</button>
 
-    <button class="btn btn-primary" @onclick="GetRubai">Выбор</button>
+            <div class="rubai">
+                @foreach (var item in rubai)
+                {
+                    <p>@item.ToString()<br /></p>
+                }
+            </div>
+        </div>
+    </div>
 </div>
 
 @code {
