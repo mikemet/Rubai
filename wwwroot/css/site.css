@@ -65,16 +65,29 @@ body {
 }
 
 .container {
-    
+    display: grid;
+    column-gap: 50px;
+    row-gap: 50px;
 }
 
 [class^="box"] {
    outline: 2px solid brown;
+   border-radius: 3px;
+   display: grid;
 }
 /*================================================================================*/
 
 .imagebox {
     max-width: 100%;
+}
+
+.annotation {
+    display:inline-block;
+}
+
+.rubaibox {
+    display: grid;
+    justify-items: center;
 }
 
 .rubai {
